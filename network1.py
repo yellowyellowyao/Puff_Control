@@ -172,8 +172,7 @@ def cnn_train():
                             best_val = val_acc
                             wrong_step = 0
                             saver.save(sess, model_dir + '/conv.ckpt', global_step=global_step)
-                            step = written_step.eval()
-                            print(written_step,step)
+
                         else:
                             wrong_step += 1
                             if wrong_step > patience:
